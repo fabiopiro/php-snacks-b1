@@ -6,6 +6,29 @@ Creiamo un array contenente le partite di basket di un’ipotetica tappa del cal
 Olimpia Milano - Cantù | 55-60
 */
 
+$games = [
+    [
+        'homeTeam' => 'Boston Celtics',
+        'awayTeam' => 'Brooklyn Nets',
+        'homeTeamScore' => 100,
+        'awayTeamScore' => 90,
+    ],
+    [
+        'homeTeam' => 'New York Knicks',
+        'awayTeam' => 'Philadelphia 76ers',
+        'homeTeamScore' => 105,
+        'awayTeamScore' => 110,
+    ],
+    [
+        'homeTeam' => 'Toronto Raptors',
+        'awayTeam' => 'Chicago Bulls',
+        'homeTeamScore' => 89,
+        'awayTeamScore' => 99,
+    ],
+];
+
+// var_dump($games)
+
 ?>
 <!-- /PHP -->
 
@@ -19,7 +42,23 @@ Olimpia Milano - Cantù | 55-60
         <title>Snack1</title>
     </head>
     <body>
-        
+        <!-- PHP -->
+        <?php
+            for ($i = 0; $i < count($games); $i++) {
+
+                echo "<strong>"."Game" . ($i+1). "</strong>";
+
+                echo "<br>";
+
+                echo $games[$i]["homeTeam"]." - ".$games[$i]["awayTeam"]." | ".$games[$i]["homeTeamScore"]." - ".$games[$i]["awayTeamScore"];
+
+                echo "<br>";
+                
+                echo "<hr>";
+
+            };
+        ?>
+        <!-- /PHP -->
     </body>
 </html>
 <!-- /HTML -->
