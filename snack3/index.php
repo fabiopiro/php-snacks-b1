@@ -5,6 +5,22 @@
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
 */
 
+$array = [];
+
+while (count($array) < 15) {
+
+    $randomNumber = rand(1 ,15);
+
+    if ( in_array($randomNumber, $array) == false) {
+            
+        array_push($array, $randomNumber);
+
+    } 
+
+}
+
+var_dump($array);
+
 ?>
 <!-- /PHP -->
 
